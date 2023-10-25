@@ -1,0 +1,28 @@
+package seven;
+import java.util.*;
+public class Seven {
+	 public static void main(String[] args) {
+	        int n = 5;
+
+	        long[] memo = new long[n + 1];
+
+	        long result = fibonacci(n, memo);
+	        System.out.println("Fibonacci(" + n + ") = " + result);
+	    }
+
+	    public static long fibonacci(int n, long[] memo) {
+	        if (n <= 1) {
+	            return n;
+	        }
+
+	        if (memo[n] != 0) {
+	            return memo[n];
+	        }
+
+	     
+	        memo[n] = fibonacci(n - 1, memo) + fibonacci(n - 2, memo);
+
+	        return memo[n];
+	    }
+	}
+
