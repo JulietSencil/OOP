@@ -1,0 +1,21 @@
+package five;
+import java.util.Scanner;
+public class Five {
+	
+	static Scanner scanner = new Scanner(System.in);
+		public static void main(String[] args) {
+		 System.out.print("Enter a number: ");
+		 int number = scanner.nextInt();
+
+	        if (number % 3 <= 0 ) {
+	            System.out.println(number +  " FIZZ");
+	        } else {
+	            System.out.println(number + " BUZZ");
+	           return ;
+	        	 
+	        }
+	    }
+	}
+
+		
+		
