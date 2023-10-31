@@ -1,0 +1,180 @@
+package calculator;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class CalculatorGUI {
+	
+
+	public class Gui_Calculator {
+		
+		    // Create components
+		    private JTextField textField;
+		    private JButton[] numberButtons = new JButton[10];
+		    private JButton[] functionButtons = new JButton[5];
+		    private JButton addButton, subButton, mulButton, divButton, equalButton, clearButton;
+		    private JPanel panel;
+
+		    // Variables to store operands and operator
+		    private double num1, num2, result;
+		    private char operator;
+
+		    public void CalculatorGUI() {
+		        // Create a frame
+		        setTitle("Calculator");
+		        setBounds(200, 200, 400, 400);
+		        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		        setResizable(false);
+
+		        // Initialize components
+		        textField = new JTextField();
+		        panel = new JPanel();
+		        operator = ' ';
+
+		        // Create number buttons
+		        for (int i = 0; i < 10; i++) {
+		            numberButtons[i] = new JButton(String.valueOf(i));
+		        }
+
+		        // Create function buttons
+		        addButton = new JButton("+");
+		        subButton = new JButton("-");
+		        mulButton = new JButton("*");
+		        divButton = new JButton("/");
+		        equalButton = new JButton("=");
+		        clearButton = new JButton("C");
+
+		        // Add components to the frame
+		        setLayout(new BorderLayout());
+		        add(textField, BorderLayout.NORTH);
+		        add(panel, BorderLayout.CENTER);
+
+		        // Add number buttons
+		        for (int i = 1; i < 10; i++) {
+		            panel.add(numberButtons[i]);
+		            numberButtons[i].addActionListener((ActionListener) this);
+		        }
+
+		        // Add function buttons
+		        panel.add(addButton);
+		        panel.add(subButton);
+		        panel.add(mulButton);
+		        panel.add(divButton);
+		        panel.add(equalButton);
+		        panel.add(clearButton);
+
+		        // Add action listeners for function buttons
+		        addButton.addActionListener((ActionListener) this);
+		        subButton.addActionListener((ActionListener) this);
+		        mulButton.addActionListener((ActionListener) this);
+		        divButton.addActionListener((ActionListener) this);
+		        equalButton.addActionListener((ActionListener) this);
+		        clearButton.addActionListener((ActionListener) this);
+
+		        // Display the frame
+		        setVisible(true);
+		    }
+
+		    private void setVisible(boolean b) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			private void add(JPanel panel2, String center) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			private void add(JTextField textField2, String north) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			private void setLayout(BorderLayout borderLayout) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			private void setResizable(boolean b) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			private void setDefaultCloseOperation(int exitOnClose) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			private void setBounds(int i, int j, int k, int l) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			private void setTitle(String string) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			public void actionPerformed(ActionEvent e) {
+		        // Handle button clicks
+		        for (int i = 0; i < 10; i++) {
+		            if (e.getSource() == numberButtons[i]) {
+		                textField.setText(textField.getText() + i);
+		                return;
+		            }
+		        }
+
+		        if (e.getSource() == addButton) {
+		            num1 = Double.parseDouble(textField.getText());
+		            operator = '+';
+		            textField.setText("");
+		        }
+		        if (e.getSource() == subButton) {
+		            num1 = Double.parseDouble(textField.getText());
+		            operator = '-';
+		            textField.setText("");
+		        }
+		        if (e.getSource() == mulButton) {
+		            num1 = Double.parseDouble(textField.getText());
+		            operator = '*';
+		            textField.setText("");
+		        }
+		        if (e.getSource() == divButton) {
+		            num1 = Double.parseDouble(textField.getText());
+		            operator = '/';
+		            textField.setText("");
+		        }
+		        if (e.getSource() == equalButton) {
+		            num2 = Double.parseDouble(textField.getText());
+		            switch (operator) {
+		                case '+':
+		                    result = num1 + num2;
+		                    break;
+		                case '-':
+		                    result = num1 - num2;
+		                    break;
+		                case '*':
+		                    result = num1 * num2;
+		                    break;
+		                case '/':
+		                    if (num2 != 0) {
+		                        result = num1 / num2;
+		                    } else {
+		                        textField.setText("Error");
+		                        return;
+		                    }
+		                    break;
+		            }
+		            textField.setText(String.valueOf(result));
+		        }
+		        if (e.getSource() == clearButton) {
+		            textField.setText("");
+		            num1 = 0;
+		            num2 = 0;
+		            operator = ' ';
+		        }
+		    }
+
+	}
+}
