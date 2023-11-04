@@ -67,7 +67,7 @@ public class Calculator implements ActionListener {
 	        textField.setBounds(10, 40, 270, 40);
 	        textField.setFont(new Font("Century Schoolbook", Font.BOLD, 30));
 	        textField.setEditable(false);
-	        textField.setHorizontalAlignment(SwingConstants.RIGHT);
+	        textField.setHorizontalAlignment(SwingConstants.LEFT);
 	        frame.add(textField);
 	        
 	   
