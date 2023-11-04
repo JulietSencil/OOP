@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 import java.awt.*;
 public class Calculator implements ActionListener {
 	
-		  
+		   //Creating variables for our calculations
 		    double number, answer;
 		    int calculation;
 		    
@@ -49,7 +49,7 @@ public class Calculator implements ActionListener {
 	        frame.setTitle("Calculator");//Setting title of the JFrame
 	        frame.setSize(310,500);//Setting size
 	        frame.getContentPane().setLayout(null);//Setting Layout
-	        frame.getContentPane().setBackground(Color.white);//Setting Background Color
+	        frame.getContentPane().setBackground(Color.blue);//Setting Background Color
 	        frame.setResizable(false);//Preventing window from resizing
 	        frame.setLocationRelativeTo(null);//Setting location to the center of the screen
 	        frame.setVisible(true);//Setting window's visibility
@@ -60,13 +60,13 @@ public class Calculator implements ActionListener {
 	    
 	    public void addComponents() {
 	        //Setting property of Label
-	        label.setBounds(250, 0, 50, 50);
+	        label.setBounds(180, 0, 70, 70);
 	        label.setForeground(Color.white);
 	        frame.add(label);
 	        
 	        //Setting property of text field
 	        textField.setBounds(10, 40, 270, 40);
-	        textField.setFont(new Font("Cambria", Font.BOLD, 20));
+	        textField.setFont(new Font("Cambria", Font.BOLD, 30));
 	        textField.setEditable(false);
 	        textField.setHorizontalAlignment(SwingConstants.RIGHT);
 	        frame.add(textField);
