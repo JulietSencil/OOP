@@ -5,12 +5,11 @@ import java.awt.event.ActionListener;
 import java.awt.*;
 public class Calculator implements ActionListener {
 	
-		   //Creating variables for our calculations
+		   
 		    double number, answer;
 		    int calculation;
 		    
-	 JFrame frame;//Creating object of JFrame class
-	 
+	 JFrame frame;
 	 JLabel label = new JLabel();
 	    JTextField textField = new JTextField();
 	  
