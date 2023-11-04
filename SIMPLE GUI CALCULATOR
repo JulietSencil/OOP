@@ -443,9 +443,3 @@ public void actionPerformed(ActionEvent e) {
     }
 }
                     
- class MainClass {
-	public static void main(String[] args) {
-		 new Calculator();
-	}
-
-}
