@@ -45,7 +45,7 @@ public class Calculator implements ActionListener {
 	    public void prepareGUI()
 	    {
 	        frame=new JFrame();
-	        frame.setTitle("Calculator");//Setting title of the JFrame
+	        frame.setTitle("CALCULATOR");//Setting title of the JFrame
 	        frame.setSize(310,500);//Setting size
 	        frame.getContentPane().setLayout(null);//Setting Layout
 	        frame.getContentPane().setBackground(Color.blue);//Setting Background Color
@@ -65,7 +65,7 @@ public class Calculator implements ActionListener {
 	        
 	        //Setting property of text field
 	        textField.setBounds(10, 40, 270, 40);
-	        textField.setFont(new Font("Cambria", Font.BOLD, 30));
+	        textField.setFont(new Font("Century Schoolbook", Font.BOLD, 30));
 	        textField.setEditable(false);
 	        textField.setHorizontalAlignment(SwingConstants.RIGHT);
 	        frame.add(textField);
@@ -74,114 +74,114 @@ public class Calculator implements ActionListener {
 	        
 	        //Setting property of button 7
 	        buttonSeven.setBounds(10, 230, 60, 40);
-	        buttonSeven.setFont(new Font("Cambria", Font.BOLD, 20));
+	        buttonSeven.setFont(new Font("Century Schoolbook", Font.BOLD, 20));
 	        frame.add(buttonSeven);
 	        
 	     // Setting property of button 8
 	        buttonEight.setBounds(80, 230, 60, 40);
-	        buttonEight.setFont(new Font("Cambria", Font.BOLD, 20));
+	        buttonEight.setFont(new Font("Century Schoolbook", Font.BOLD, 20));
 	        frame.add(buttonEight);
 	 
 	        //Setting property of button 9
 	        buttonNine.setBounds(150, 230, 60, 40);
-	        buttonNine.setFont(new Font("Cambria", Font.BOLD, 20));
+	        buttonNine.setFont(new Font("Century Schoolbook", Font.BOLD, 20));
 	        frame.add(buttonNine);
 	 
 	        //Setting property of button 4
 	        buttonFour.setBounds(10, 290, 60, 40);
-	        buttonFour.setFont(new Font("Cambria", Font.BOLD, 20));
+	        buttonFour.setFont(new Font("Century Schoolbook", Font.BOLD, 20));
 	        frame.add(buttonFour);
 	 
 	       //Setting property of button 5
 	        buttonFive.setBounds(80, 290, 60, 40);
-	        buttonFive.setFont(new Font("Cambria", Font.BOLD, 20));
+	        buttonFive.setFont(new Font("Century Schoolbook", Font.BOLD, 20));
 	        frame.add(buttonFive);
 	        
 	        //Setting property of button 6
 	        buttonSix.setBounds(150, 290, 60, 40);
-	        buttonSix.setFont(new Font("Cambria", Font.BOLD, 20));
+	        buttonSix.setFont(new Font("Century Schoolbook", Font.BOLD, 20));
 	        frame.add(buttonSix);
 	 
 	        //Setting property of button 1
 	        buttonOne.setBounds(10, 350, 60, 40);
-	        buttonOne.setFont(new Font("Cambria", Font.BOLD, 20));
+	        buttonOne.setFont(new Font("Century Schoolbook", Font.BOLD, 20));
 	        frame.add(buttonOne);
 	 
 	        //Setting property of button 2
 	        buttonTwo.setBounds(80, 350, 60, 40);
-	        buttonTwo.setFont(new Font("Cambria", Font.BOLD, 20));
+	        buttonTwo.setFont(new Font("Century Schoolbook", Font.BOLD, 20));
 	        frame.add(buttonTwo);
 	        
 	        //Setting property of button 3
 	        buttonThree.setBounds(150, 350, 60, 40);
-	        buttonThree.setFont(new Font("Cambria", Font.BOLD, 20));
+	        buttonThree.setFont(new Font("Century Schoolbook", Font.BOLD, 20));
 	        frame.add(buttonThree);
 	        
 	      //Setting property of dot button
 	        buttonDot.setBounds(150, 410, 60, 40);
-	        buttonDot.setFont(new Font("Cambria", Font.BOLD, 20));
+	        buttonDot.setFont(new Font("Century Schoolbook", Font.BOLD, 20));
 	        frame.add(buttonDot);
 	 
 	        //Setting property of button 0
 	        buttonZero.setBounds(10, 410, 130, 40);
-	        buttonZero.setFont(new Font("Cambria", Font.BOLD, 20));
+	        buttonZero.setFont(new Font("Century Schoolbook", Font.BOLD, 20));
 	        frame.add(buttonZero);
 	 
 	       //Setting property of button =
 	        buttonEqual.setBounds(220, 350, 60, 100);
-	        buttonEqual.setFont(new Font("Cambria", Font.BOLD, 20));
+	        buttonEqual.setFont(new Font("Century Schoolbook", Font.BOLD, 20));
 	        buttonEqual.setBackground(new Color(239, 188, 2));
 	        frame.add(buttonEqual);
 	 
 	       //Setting property of button /
 	        buttonDiv.setBounds(220, 110, 60, 40);
-	        buttonDiv.setFont(new Font("Cambria", Font.BOLD, 20));
+	        buttonDiv.setFont(new Font("Century Schoolbook", Font.BOLD, 20));
 	        buttonDiv.setBackground(new Color(239, 188, 2));
 	        frame.add(buttonDiv);
 	        
 	        //Setting property of button square root
 	        buttonSqrt.setBounds(10, 170, 60, 40);
-	        buttonSqrt.setFont(new Font("Cambria", Font.BOLD, 18));
+	        buttonSqrt.setFont(new Font("Century Schoolbook", Font.BOLD, 18));
 	        frame.add(buttonSqrt);
 	 
 	        //Setting property of button X
 	        buttonMul.setBounds(220, 230, 60, 40);
-	        buttonMul.setFont(new Font("Cambria", Font.BOLD, 20));
+	        buttonMul.setFont(new Font("Century Schoolbook", Font.BOLD, 20));
 	        buttonMul.setBackground(new Color(239, 188, 2));
 	        frame.add(buttonMul);
 	 
 	        //Setting property of button -
 	        buttonMinus.setBounds(220, 170, 60, 40);
-	        buttonMinus.setFont(new Font("Cambria", Font.BOLD, 20));
+	        buttonMinus.setFont(new Font("Century Schoolbook", Font.BOLD, 20));
 	        buttonMinus.setBackground(new Color(239, 188, 2));
 	        frame.add(buttonMinus);
 	        //Setting property of button +
 	        buttonPlus.setBounds(220, 290, 60, 40);
-	        buttonPlus.setFont(new Font("Cambria", Font.BOLD, 20));
+	        buttonPlus.setFont(new Font("Century Schoolbook", Font.BOLD, 20));
 	        buttonPlus.setBackground(new Color(239, 188, 2));
 	        frame.add(buttonPlus);
 	        
 	        //Setting property of button square
 	        buttonSquare.setBounds(80, 170, 60, 40);
-	        buttonSquare.setFont(new Font("Cambria", Font.BOLD, 20));
+	        buttonSquare.setFont(new Font("Century Schoolbook", Font.BOLD, 20));
 	        frame.add(buttonSquare);
 	 
 	        //Setting property of reciprocal button
 	        buttonReciprocal.setBounds(150, 170, 60, 40);
-	        buttonReciprocal.setFont(new Font("Cambria", Font.BOLD, 15));
+	        buttonReciprocal.setFont(new Font("Century Schoolbook", Font.BOLD, 15));
 	        frame.add(buttonReciprocal);
 	 
 	        //Setting property of delete button
 	        buttonDelete.setBounds(150, 110, 60, 40);
-	        buttonDelete.setFont(new Font("Cambria", Font.BOLD, 12));
-	        buttonDelete.setBackground(Color.red);
+	        buttonDelete.setFont(new Font("Century Schoolbook", Font.BOLD, 12));
+	        buttonDelete.setBackground(Color.pink);
 	        buttonDelete.setForeground(Color.white);
 	        frame.add(buttonDelete);
 	        
 	        //Setting property of clear button
 	        buttonClear.setBounds(80, 110, 60, 40);
-	        buttonClear.setFont(new Font("Cambria", Font.BOLD, 12));
-	        buttonClear.setBackground(Color.red);
+	        buttonClear.setFont(new Font("Century Schoolbook", Font.BOLD, 12));
+	        buttonClear.setBackground(Color.pink);
 	        buttonClear.setForeground(Color.white);
 	        frame.add(buttonClear);
 	 
