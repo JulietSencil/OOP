@@ -174,15 +174,15 @@ public class Calculator implements ActionListener {
 	        //Setting property of delete button
 	        buttonDelete.setBounds(150, 110, 60, 40);
 	        buttonDelete.setFont(new Font("Century Schoolbook", Font.BOLD, 12));
-	        buttonDelete.setBackground(Color.pink);
-	        buttonDelete.setForeground(Color.white);
+	        buttonDelete.setBackground(Color.white);
+	        buttonDelete.setForeground(Color.black);
 	        frame.add(buttonDelete);
 	        
 	        //Setting property of clear button
 	        buttonClear.setBounds(80, 110, 60, 40);
 	        buttonClear.setFont(new Font("Century Schoolbook", Font.BOLD, 12));
-	        buttonClear.setBackground(Color.pink);
-	        buttonClear.setForeground(Color.white);
+	        buttonClear.setBackground(Color.white);
+	        buttonClear.setForeground(Color.black);
 	        frame.add(buttonClear);
 	 
 	    }
