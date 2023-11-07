@@ -1,0 +1,122 @@
+package logIn;
+import javax.swing.*; 
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+public class Calculator implements ActionListener {
+	 double number, answer;
+	    int calculation;
+	  JFrame frame;
+	  JLabel label = new JLabel();
+	  
+	 
+	    
+	   
+	    JButton buttonEqual = new JButton("Button2");
+	    JButton buttonMul = new JButton("LABEL 1" ) ;
+	    
+	   
+	    JButton buttonPlus = new JButton("Button1");
+	  
+	    Calculator(){
+	    prepareGUI();
+        addComponents();
+        addActionEvent();
+	    }
+	    {
+	        prepareGUI();
+	    }
+	    public void prepareGUI()
+	    {
+	        frame=new JFrame();
+	        frame.setTitle("    FRAME 2  ");//Setting title of the JFrame
+	        frame.setSize(800,600);//Setting size
+	        frame.getContentPane().setLayout(null);//Setting Layout
+	        frame.getContentPane().setBackground(Color.white);//Setting Background Color
+	        frame.setResizable(false);//Preventing window from resizing
+	        frame.setLocationRelativeTo(null);//Setting location to the center of the screen
+	        frame.setVisible(true);//Setting window's visibility
+	        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//Setting default close operation
+	    }
+	    public void addComponents() {
+	        //Setting property of Label
+	        label.setBounds(250, 0, 50, 50);
+	        label.setForeground(Color.white);
+	        frame.add(label);
+	        
+	       
+	     
+	 
+	      
+	 
+	     
+	        
+	      //Setting property of button =
+	        buttonEqual.setBounds(375, 460, 395, 90);
+	        buttonEqual.setFont(new Font("Arial", Font.BOLD, 20));
+	        buttonEqual.setBackground(new Color(239, 188, 2));
+	        frame.add(buttonEqual);
+	 
+	     
+	        //Setting property of button Label
+	        buttonMul.setBounds(10, 10,760, 455);
+	        buttonMul.setFont(new Font("Arial", Font.BOLD, 12));
+	        buttonMul.setBackground(new Color(239, 188, 2));
+	        frame.add(buttonMul);
+	        
+	   
+	        //Setting property of button 1
+	        buttonPlus.setBounds(10,460, 400, 90);
+	        buttonPlus.setFont(new Font("Arial", Font.BOLD, 20));
+	        buttonPlus.setBackground(new Color(239, 188, 2));
+	        frame.add(buttonPlus);
+	 
+	    }
+	    public void addActionEvent() {
+	        //Registering ActionListener to buttons
+	      
+	        buttonMul.addActionListener(this);
+	       
+	        buttonPlus.addActionListener(this);
+	        
+	        buttonEqual.addActionListener(this);
+	     
+	 
+	}
+	    @Override
+	    public void actionPerformed(ActionEvent e) {
+	        Object source = e.getSource();
+	       
+	            //Setting functionality for delete button(backspace)
+	          
+	          }
+	   
+	   
+	      
+	    public void enable() {
+	      
+	       
+	        label.setEnabled(true);
+	      
+	        buttonMul.setEnabled(true);
+	       
+	        buttonPlus.setEnabled(true);
+	       
+	        buttonEqual.setEnabled(true);
+	        
+	 
+	    }
+	 
+	    public void disable() {
+	       
+	      
+	       
+	        buttonMul.setEnabled(false);
+	       
+	        buttonPlus.setEnabled(false);
+	       
+	        buttonEqual.setEnabled(false);
+	        
+	    }
+	}
+
