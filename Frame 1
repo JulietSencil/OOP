@@ -1,0 +1,177 @@
+package logIn;
+import javax.swing.*; 
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+public class Calculator implements ActionListener {
+	 double number, answer;
+	    int calculation;
+	  JFrame frame;
+	  JLabel label = new JLabel();
+	    JTextField textField = new JTextField();
+	   
+	    JButton buttonEqual = new JButton("Button3");
+	    JButton buttonMul = new JButton("Button2");
+	   
+	    JButton buttonPlus = new JButton("Button1");
+	  
+	    Calculator(){
+	    prepareGUI();
+        addComponents();
+        addActionEvent();
+	    }
+	    {
+	        prepareGUI();
+	    }
+	    public void prepareGUI()
+	    {
+	        frame=new JFrame();
+	        frame.setTitle("    FRAME1  ");//Setting title of the JFrame
+	        frame.setSize(310,500);//Setting size
+	        frame.getContentPane().setLayout(null);//Setting Layout
+	        frame.getContentPane().setBackground(Color.white);//Setting Background Color
+	        frame.setResizable(false);//Preventing window from resizing
+	        frame.setLocationRelativeTo(null);//Setting location to the center of the screen
+	        frame.setVisible(true);//Setting window's visibility
+	        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//Setting default close operation
+	    }
+	    public void addComponents() {
+	        //Setting property of Label
+	        label.setBounds(250, 0, 50, 50);
+	        label.setForeground(Color.white);
+	        frame.add(label);
+	        
+	        //Setting property of text field
+	        textField.setBounds(10, 40, 270, 40);
+	        textField.setFont(new Font("Arial", Font.BOLD, 20));
+	        textField.setEditable(false);
+	        textField.setHorizontalAlignment(SwingConstants.LEFT);
+	        frame.add(textField);
+	        
+	     
+	 
+	      
+	 
+	     
+	        
+	      //Setting property of button 3
+	        buttonEqual.setBounds(160, 275, 120, 180);
+	        buttonEqual.setFont(new Font("Arial", Font.BOLD, 20));
+	        buttonEqual.setBackground(new Color(239, 188, 2));
+	        frame.add(buttonEqual);
+	 
+	     
+	        //Setting property of button 2
+	        buttonMul.setBounds(160, 90,120, 185);
+	        buttonMul.setFont(new Font("Arial", Font.BOLD, 20));
+	        buttonMul.setBackground(new Color(239, 188, 2));
+	        frame.add(buttonMul);
+	        
+	   
+	        //Setting property of button 1
+	        buttonPlus.setBounds(10, 90, 150, 365);
+	        buttonPlus.setFont(new Font("Arial", Font.BOLD, 20));
+	        buttonPlus.setBackground(new Color(239, 188, 2));
+	        frame.add(buttonPlus);
+	 
+	    }
+	    public void addActionEvent() {
+	        //Registering ActionListener to buttons
+	      
+	        buttonMul.addActionListener(this);
+	       
+	        buttonPlus.addActionListener(this);
+	        
+	        buttonEqual.addActionListener(this);
+	     
+	 
+	}
+	    @Override
+	    public void actionPerformed(ActionEvent e) {
+	        Object source = e.getSource();
+	       
+	            //Setting functionality for delete button(backspace)
+	            int length = textField.getText().length();
+	            int number = length - 1;
+	            if (length > 0) {
+	                StringBuilder back = new StringBuilder(textField.getText());
+	                back.deleteCharAt(number);
+	                textField.setText(back.toString());
+	 
+	            }
+	            if (textField.getText().endsWith("")) {
+	                label.setText("");
+	            }
+	    
+	       
+	            switch (calculation) {
+	                case 1:
+	                    answer = number + Double.parseDouble(textField.getText());
+	                    if (Double.toString(answer).endsWith(".0")) {
+	                        textField.setText(Double.toString(answer).replace(".0", ""));
+	                    } else {
+	                        textField.setText(Double.toString(answer));
+	                    }
+	                    label.setText("");
+	                    break;
+	                case 2:
+	                    answer = number - Double.parseDouble(textField.getText());
+	                    if (Double.toString(answer).endsWith(".0")) {
+	                        textField.setText(Double.toString(answer).replace(".0", ""));
+	                    } else {
+	                        textField.setText(Double.toString(answer));
+	                    }
+	                    label.setText("");
+	                    break;
+	                case 3:
+	                    answer = number * Double.parseDouble(textField.getText());
+	                    if (Double.toString(answer).endsWith(".0")) {
+	                        textField.setText(Double.toString(answer).replace(".0", ""));
+	                    } else {
+	                        textField.setText(Double.toString(answer));
+	                    }
+	                    label.setText("");
+	                    break;
+	                case 4:
+	                	  answer = number / Double.parseDouble(textField.getText());
+	                      if (Double.toString(answer).endsWith(".0")) {
+	                          textField.setText(Double.toString(answer).replace(".0", ""));
+	                      } else {
+	                          textField.setText(Double.toString(answer));
+	                      }
+	                      label.setText("");
+	                      break;
+	   
+	              }
+	          }
+	   
+	   
+	      
+	    public void enable() {
+	      
+	        textField.setEnabled(true);
+	        label.setEnabled(true);
+	      
+	        buttonMul.setEnabled(true);
+	       
+	        buttonPlus.setEnabled(true);
+	       
+	        buttonEqual.setEnabled(true);
+	        
+	 
+	    }
+	 
+	    public void disable() {
+	       
+	        textField.setText("");
+	        label.setText(" ");
+	       
+	        buttonMul.setEnabled(false);
+	       
+	        buttonPlus.setEnabled(false);
+	       
+	        buttonEqual.setEnabled(false);
+	        
+	    }
+	}
+
